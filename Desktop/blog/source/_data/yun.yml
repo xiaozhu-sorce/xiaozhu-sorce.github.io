@@ -1,0 +1,111 @@
+mode: time
+
+banner:
+  enable: true
+  title: 小朱の站点
+  src: /js/ui/banner.js
+  border: true
+  cloud:
+    enable: true
+    color: "white"
+  go_down:
+    enable: true
+    icon: icon-arrow-down-s-line
+
+social:
+  - name: GitHub
+    link: https://github.com/xiaozhu-sorce
+    icon: icon-github-line
+    color: "#181717"
+  - name: E-Mail
+    link: mailto:me@790362227@qq.com
+    icon: icon-mail-line
+    color: "#8E71C1"
+
+favicon: /favicon.ico
+
+notice:
+  enable: true
+  content: Welcome to my world.
+
+bg_image:
+  enable: true
+  url: https://i.loli.net/2021/04/17/BwkOi6E4NQs7YRx.jpg
+  opacity: 1
+
+avatar:
+  enable: true
+  url: https://i.loli.net/2021/03/23/2QaVR76DWpFEUhu.jpg
+  rounded: true
+  opacity: 1
+  mickey_mouse: true
+  status:
+    enable: true
+    emoji: 😭
+    message: Don't want to work
+
+post_meta:
+  item_text: true
+  created_at: true
+  updated_at: true
+  categories: true
+  tags: true
+
+prismjs:
+  enable: true
+  preprocess: true
+  line_number: false
+  tab_replace: ""
+
+lazyload:
+  enable: true
+
+reward:
+  enable: false
+
+footer:
+  icon:
+    name: icon-cloud-line
+    animated: true
+    color: "#FFFFFF"
+
+  powered:
+    enable: true
+    color: "#FFFFFF"
+
+  beian:
+    enable: false
+    color: "#FFFFFF"
+
+say:
+  enable: true
+  api: /data/sentences.json
+  hitokoto:
+    enable: false
+
+menu:
+  home:
+    path: /
+    icon: icon-home-4-line
+  list:
+    - type: archives
+      path: /archives/
+      icon: icon-archive-line
+    - type: categories
+      path: /categories/
+      icon: icon-folder-2-line
+    - type: tags
+      path: /tags/
+      icon: icon-price-tag-3-line
+  custom:
+    title: 文档
+    path: /
+    icon: icon-settings-line
+
+wordcloud:
+  enable: true
+
+wordcount:
+  enable: true
+  count: true
+  time: true
