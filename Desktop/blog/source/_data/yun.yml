@@ -67,7 +67,6 @@ footer:
   icon:
     name: icon-cloud-line
     animated: true
-    color: "#FFFFFF"
 
   powered:
     enable: true
