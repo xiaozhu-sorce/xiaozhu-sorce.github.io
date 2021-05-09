@@ -70,11 +70,9 @@ footer:
 
   powered:
     enable: true
-    color: "#FFFFFF"
 
   beian:
     enable: false
-    color: "#FFFFFF"
 
 say:
   enable: true
