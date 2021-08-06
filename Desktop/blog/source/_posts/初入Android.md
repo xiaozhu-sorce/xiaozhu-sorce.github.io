@@ -58,8 +58,6 @@ Android 包含一些C/C++库，这些库能被[Android系统](https://baike.baid
 
 Android开发四大组件分别是：活动（[Activity](https://baike.baidu.com/item/Activity)）： 用于表现功能。服务（[Service](https://baike.baidu.com/item/Service)）： 后台运行服务，不提供界面呈现。广播接收器（BroadcastReceiver）：用于接收广播。内容提供商（[Content Provider](https://baike.baidu.com/item/Content%20Provider)）： 支持在多个应用中存储和读取数据，相当于[数据库](https://baike.baidu.com/item/数据库)。
 
-
-
 ### 活动
 
 Android 中，Activity是所有程序的根本，所有程序的流程都运行在Activity 之中，Activity可以算是开发者遇到的最频繁，也是Android 当中最基本的模块之一。在Android的程序当中，Activity 一般代表[手机](https://baike.baidu.com/item/手机)屏幕的一屏。如果把手机比作一个浏览器，那么Activity就相当于一个网页。在Activity 当中可以添加一些Button、Check box 等控件。可以看到Activity 概念和网页的概念相当类似。
@@ -68,27 +66,19 @@ Android 中，Activity是所有程序的根本，所有程序的流程都运行�
 
 当打开一个新的屏幕时，之前一个屏幕会被置为暂停状态，并且压入历史堆栈中。用户可以通过回退操作返回到以前打开过的屏幕。可以选择性的移除一些没有必要保留的屏幕，因为Android会把每个应用的开始到当前的每个屏幕保存在堆栈中。
 
-
-
 ### 服务
 
 Service 是android 系统中的一种组件，它跟Activity 的级别差不多，但是他不能自己运行，只能后台运行，并且可以和其他组件进行交互。Service 是没有界面的长生命周期的代码。[Service](https://baike.baidu.com/item/Service)是一种程序，它可以运行很长时间，但是它却没有用户界面。这么说有点枯燥，来看个例子。打开一个音乐播放器的程序，这个时候若想上网了，那么，打开Android浏览器，这个时候虽然已经进入了浏览器这个程序，但是，歌曲播放并没有停止，而是在后台继续一首接着一首的播放。其实这个播放就是由播放音乐的Service进行控制。当然这个播放音乐的Service也可以停止，例如，当播放列表里边的歌曲都结束，或者用户按下了停止音乐播放的快捷键等。Service 可以在和多场合的应用中使用，比如播放多媒体的时候用户启动了其他Activity这个时候程序要在后台继续播放，比如在后台记录地理信息位置的改变等等，总之服务嘛，总是藏在后头的。
 
-
-
 ### 广播接收器
 
 在Android 中，[Broadcast](https://baike.baidu.com/item/Broadcast)是一种广泛运用的在应用程序之间传输信息的机制。可以使用BroadcastReceiver  来让应用对一个外部的事件做出响应。这是非常有意思的，例如，当电话呼入这个外部事件到来的时候，可以利用BroadcastReceiver  进行处理。例如，当下载一个程序成功完成的时候，仍然可以利用BroadcastReceiver  进行处理。BroadcastReceiver不能生成UI，也就是说对于用户来说不是透明的，用户是看不到的。
-
-
 
 ### 内容提供
 
 Content Provider 是Android提供的第三方应用数据的访问方案。
 
 在Android中，对数据的保护是很严密的，一个应用所持有的数据库、文件等内容，都是不允许其他直接访问的。Android当然不会真的把每个应用都做成一座孤岛，它为所有应用都准备了一扇窗，这就是Content  Provider。
-
-
 
 ## 平台优势
 
@@ -105,8 +95,6 @@ Content Provider 是Android提供的第三方应用数据的访问方案。
 ### 方便开发
 
 Android平台提供给第三方开发商一个十分宽泛、自由的环境，不会受到各种条条框框的阻扰，可想而知，会有多少新颖别致的软件会诞生。
-
-
 
 ### Google应用
 
@@ -140,7 +128,6 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 
 3. 让它比Java更简洁。
 
-   
 
 ## 关于学习
 
@@ -156,8 +143,6 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 
 ​        总而言之，就是我们学习和使用Java的必备装备。工欲善其事，必先利其器。接下来就来带领大家走入Java世界的大门，期待以后与君同行。
 
-
-
 ##  JDK的下载与配置
 
 ### JDK的下载
@@ -170,59 +155,27 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 
 ![](https://z3.ax1x.com/2021/07/28/W7mzy4.png)
 
-
-
 **那么我们点击这个地方**
-
-
 
 ![](https://z3.ax1x.com/2021/07/28/W7KOYt.jpg)
 
-
-
 **这里会跳转到如下页面↓**
-
-
 
 ![](https://z3.ax1x.com/2021/07/28/W74cB6.png)
 
-
-
 我们向下翻会看到各种系统的安装的包和不同方法，Installer这里是下载后可直接安装的，另一种是需要解压等一系列操作，因为我的电脑是win10的系统，所以直接选择这个进行下载。
-
-
 
 ![](https://z3.ax1x.com/2021/07/28/W75VC4.png)
 
-
-
 点击后会出现这个弹窗，这里这个勾选同意，后续步骤就和正常的安装电脑程序一样了！（这里要记一下安装的路径，后续步骤需要使用）
-
-
 
 ![](https://z3.ax1x.com/2021/07/28/W74vCQ.png)
 
-
-
 **安装好了，我们离成为一只Java攻城狮就更进一步了**
-
-
 
 ![](https://www.runoob.com/wp-content/uploads/2018/08/1534411157-4157-3932295-b821f0e17887bcdf.png)
 
-
-
 ### 环境变量的配置
-
-到这里，就有小可爱会说了：“*你说什么？竟然还有？rnm，退钱！*”，但行百里者半九十，真的就剩(~~亿~~)一点点了。
-
-<center class="half">
-    <img src="https://img0.baidu.com/it/u=1113513761,2114463907&fm=26&fmt=auto&gp=0.jpg" width="300"/>
-    <img src="https://z3.ax1x.com/2021/07/29/W7ThZt.png" width="300"/>
-</center>
-
-
-***请耐心往下看***
 
 接下来要做的事是，配置环境变量，这一步就是让电脑激活你所安装的Java环境，使电脑真正的拥有Java环境。那咱们继续，如图找到“**我的电脑（此电脑）**”，打开
 
@@ -246,10 +199,6 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
     <img src="https://z3.ax1x.com/2021/07/28/W7IHk8.png" width="300"/>
     <img src="https://z3.ax1x.com/2021/07/28/W7Iqfg.png" width="300"/>
 </center>
-
-
-
-
 点击“**环境变量**”，会看到如下页面
 
 ![](https://z3.ax1x.com/2021/07/28/W7I8e0.png)
@@ -287,8 +236,6 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 ```
 
 ![5baa1d13920ae8e2543fdfabf2b1e330.png](https://img-blog.csdnimg.cn/img_convert/5baa1d13920ae8e2543fdfabf2b1e330.png)
-
-
 
 通过“**上移**”将这两条弄着最顶端（QwQ）
 
@@ -336,8 +283,6 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 ![](https://z3.ax1x.com/2021/08/03/fiXJUJ.png)
 
 我们点击左上角的**File**选择**New**选择**Project**
-
-![](https://www.hualigs.cn/image/6101836dc9a81.jpg)
 
 然后会看到这样的界面
 
@@ -443,7 +388,32 @@ Kotlin已正式成为[Android](https://baike.baidu.com/item/Android/60243)官方
 
 ![](https://z3.ax1x.com/2021/07/29/WqR3E8.png)
 
-大功告成，回到我们之前的页面，点击run，在手机上查看全新的效果吧
+大功告成，回到我们之前的页面，点击run，在虚拟手机上查看全新的效果吧！
+
+![](https://z3.ax1x.com/2021/08/05/feKjTx.png)
+
+到这里我们学习android所需的基础环境搭建就告一段落，接下来补充一段有关android的布局部分的知识：
+
+我们的布局图画相关文件都在这个res文件夹里，点击后可以看到有四个子文件夹，分别是drawable,layout,mipmap,values。
+
+![](https://z3.ax1x.com/2021/08/05/feMXvQ.png)
+
+其中layout文件夹内存放的就是就是我们布局的相关文件，点开目前唯一一个文件看一下。可以发现和我们刚刚在虚拟机上运行的视图相同。
+
+![](https://z3.ax1x.com/2021/08/05/feQvRO.png)
+
+然后我们点击code，切换到代码部分（也可以点击spilt两边同时看），我们简单介绍一下相关的东西
+
+![](https://z3.ax1x.com/2021/08/05/felItP.png)
+
+* 可以看到这里的控件类型是TextView，也就是文本视图，可以现实其中的文本。同样的控件还有很多如Button（按键），ImageView（图像视图）等。
+* 其中会有长度，宽度等必要属性（所有组件都必须有），后面的wrap_content的涵义我们下次会介绍
+* 然后就是text这个属性，是控制TextView的文本显示。
+* 其他的是和控件的摆放位置相关的属性，这个我们之后也会讲解，有兴趣的同学提前可以下去了解一下
+
+**~小练习~**
+
+***我们怎么通过控件的选择和摆放来实现一个简单的手机计算器的布局样式呢？有兴趣的同学可以尝试一下。具体的教程会在下次直播时与大家见面，敬请期待！***
 
 
 
