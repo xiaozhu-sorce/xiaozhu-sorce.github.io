@@ -5,6 +5,7 @@ categories: Android
 tags: Android
 author: 小朱&&liu&&qiu
 comments: true
+stricky: 1
 ---
 
 # 什么是Android？
