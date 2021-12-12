@@ -20,6 +20,8 @@ Java 中常用的存储容器就是数组和集合，二者有以下区别：
   - **数组可以存储基本数据类型，也可以存储引用数据类型**；
   - **集合只能存储引用数据类型**，基本数据类型的变量要转换成对应的包装类才能放入容器类中。
 
+<!-- more -->
+
 > Java 集合框架主要分为 `Collection` 和 `Map` 两种。其中，`Collection` 又分为 `List`、`Set` 以及 `Queue`。
 >
 > - `Collection` - 一个独立元素的序列，这些元素都服从一条或者多条规则。
@@ -83,7 +85,7 @@ public interface Iterator<E>
 
 > 在传统C++迭代器中，我们可以通过类似数组索引下标通过i++来查找数据元素。与C++不同，Java调用迭代器只能通过`next()`方法去查找元素。而Java迭代器指向的也是两个元素之间的位置。即：当调用 next 时，迭代器就越过下一个元素，并返回刚刚越过的那个元素的引用。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNly1gxb5tynqxej31840kq75c.jpg" alt="迭代器移动" style="zoom: 45%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxbbnozqc5j31840kqdgw.jpg" alt="迭代器移动" style="zoom: 45%;" />
 
 - `hasNext()`可以集合中是否还有元素，配合next通过迭代器返回数据元素。
 
