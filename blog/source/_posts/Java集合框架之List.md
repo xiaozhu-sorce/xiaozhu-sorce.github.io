@@ -83,9 +83,9 @@ public interface Iterator<E>
 
 - `next()`通过反复调用next方法就可以逐个访问集合中的每个元素。当到达集合的末尾是会抛异常NoSuchElementException。所以要配合hasNext方法判断是否还有元素可以返回。
 
-> 在传统C++迭代器中，我们可以通过类似数组索引下标通过i++来查找数据元素。与C++不同，Java调用迭代器只能通过`next()`方法去查找元素。而Java迭代器指向的也是两个元素之间的位置。即：当调用 next 时，迭代器就越过下一个元素，并返回刚刚越过的那个元素的引用。
+> 在传统C++迭代器中，我们可以通过类似数组索引下标通过is++来查找数据元素。与C++不同，Java调用迭代器只能通过`next()`方法去查找元素。而Java迭代器指向的也是两个元素之间的位置。即：当调用 next 时，迭代器就越过下一个元素，并返回刚刚越过的那个元素的引用。
 
-<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxbbnozqc5j31840kqdgw.jpg" alt="迭代器移动" style="zoom: 45%;" />
+<img src="https://tva1.sinaimg.cn/large/008i3skNgy1gxbbnozqc5j31840kqdgw.jpg" alt="迭代器路径" style="zoom: 80%;" />
 
 - `hasNext()`可以集合中是否还有元素，配合next通过迭代器返回数据元素。
 

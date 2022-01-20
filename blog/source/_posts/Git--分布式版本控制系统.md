@@ -153,6 +153,14 @@ Changes not staged for commit:
 
 * git log：查看提交的历史，可以查看一个项目提交历史的各个人的提交
 
+## git fetch/pull
+
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gyk8q3q577j31h40twjt4.jpg" alt="git pul" style="zoom:       80%;" />
+
+<img src="https://tva1.sinaimg.cn/large/008i3skNly1gyk8q908x6j31gg0tg0uq.jpg" alt="git fetch" style="zoom: 80%;" />
+
+从图中我们可以看出，`git fetch`命令从服务器上抓取本地没有的数据，它只是更新了你的远程跟踪分支，并不会修改工作目录的内容，只会获得数据然后让你自己合并。`git pull `在大多数的情况下他的含义是一个`git fetch`紧接着一个`git merge`命令。也就是与当前分支所跟踪的远程分支进行数据抓取然后合并。
+
 # 远程仓库的使用
 
 远程仓库是指托管在因特网或其他网络中的你的项目的版本库。 [GitHub](https://github.com/)是个神奇的网站，从名字就可以看出，这个网站就是提供Git仓库托管服务的，所以，只要注册一个GitHub账号，就可以免费获得Git远程仓库。由于你的本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，所以，在所有的工作开始之前可能需要你去获取并且设置一下你的SSH Key。
