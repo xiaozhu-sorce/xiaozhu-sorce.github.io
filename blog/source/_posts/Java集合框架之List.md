@@ -122,7 +122,7 @@ public interface List<E> extends Collection<E>
 }
 ```
 
-> 我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化。而看看 ArratList && LinkedList 源码你就会发现。这两个接口都实现了 java.io.Serializable，也就不难理解为什么List是一个有序集合。
+> 我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化。而看看 ArrayList && LinkedList 源码你就会发现。这两个接口都实现了 java.io.Serializable，也就不难理解为什么List是一个有序集合。
 
 ## LinkedList
 
@@ -492,6 +492,69 @@ public boolean remove(Object o) {
 ```
 
 对象能否被GC的依据是是否还有引用指向它，上面代码中如果不手动赋`null`值，除非对应的位置被其他元素覆盖，否则原来的对象就一直不会被回收。
+
+## Vector
+
+Vector 是一个古老的集合，JDK1.0就有了。大多数操作与ArrayList 相同，区别之处在于**Vector是线程安全的**。可以由两个两个线程安全的访问一个Vector 对象。但是，如果仅仅是一个线程去访问Vector，代码要在同步的操作上耗费大量的时间。因此建议在不需要同步时使用ArrayList，而不需要使用Vector。
+
+### Stack
+
+Stack是栈。其特性是：**先进后出**(FILO, First In Last Out)。
+
+Java中Stack类是继承于Vector(矢量队列)的，由于Vector是通过数组实现的，这就意味着，**Stack也是通过数组实现的**，**而非链表**。
+
+```java
+public class Stack<E> extends Vector<E> {
+  public Stack() {
+    }
+  
+  public E push(E item) {
+        addElement(item);
+
+        return item;
+    }
+  
+  public synchronized E pop() {
+        E       obj;
+        int     len = size();
+
+        obj = peek();
+        removeElementAt(len - 1);
+
+        return obj;
+    }
+  
+   public synchronized E peek() {
+        int     len = size();
+
+        if (len == 0)
+            throw new EmptyStackException();
+        return elementAt(len - 1);
+    }
+  
+   public boolean empty() {
+          return size() == 0;
+    }
+  
+  public synchronized int search(Object o) {
+        int i = lastIndexOf(o);
+
+        if (i >= 0) {
+            return size() - i;
+        }
+        return -1;
+    }
+}
+```
+
+以上即为Java工具包中的Stack类内部实现方法，以下为简要总结：
+
+- push()：入栈，将元素追加到数组的末尾。
+- pop()：出栈，将末尾元素弹出，既要取得元素还要**进行元素的删除**。
+- peek()：取出栈顶的元素但不进行删除。
+- empty()：判断栈是否为空，即数组中是否有元素。
+
+除此之外，我们能看到Stack类中的每一个方法都添加了synchronized关键字保证线程安全。也符合我们上面所说的Vector类的特性。
 
 ## Fail-Fast机制
 
