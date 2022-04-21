@@ -124,6 +124,14 @@ public interface List<E> extends Collection<E>
 
 > 我们都知道一个对象只要实现了Serilizable接口，这个对象就可以被序列化。而看看 ArrayList && LinkedList 源码你就会发现。这两个接口都实现了 java.io.Serializable，也就不难理解为什么List是一个有序集合。
 
+## List常用实现类的对比
+
+LinkedList、ArrayList、Vector有何不同：
+
+- LinkedList：对于频繁的对元素进行增删查改是，效率比ArrayList高，底层实现逻辑为双向链表
+- ArrayList：**线程是不安全的**，效率高；底层使用**Object[] elementData**存储
+- Vector：**线程是安全的**，效率低；底层使用**Object[] elementData**存储
+
 ## LinkedList
 
 基于双向链表实现，只能顺序访问，但是可以快速地在链表中间插入和删除元素。此外由于 LinkedList 同时实现了 List 接口和 Deque 接口，也就是说它既可以看作一个顺序容器，又可以看作一个队列 (Queue)，同时又可以看作一个栈 (Stack)。
@@ -157,6 +165,13 @@ private static class Node<E> {
   }
 }
 ```
+
+> 静态内部类：
+>
+> - 内部类并不持有外部类的引用，也就是两者之间并没有“强依赖”的关系，没有外部类，内部类也可以创建实例。
+> - 如果一个类是静态的，那么他一定是一个静态内部类
+>
+> 这里的Node类被声明为了静态内部类，Node类并不是依赖于LinkedList存在，也就不需要持有LinkedList类的引用。
 
 ### 方法剖析
 
